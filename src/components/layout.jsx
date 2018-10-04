@@ -6,7 +6,7 @@ import userConfig from '../../config';
 
 import Header from '../components/Header';
 
-class Template extends React.Component {
+class Layout extends React.Component {
   render() {
     const { location, children } = this.props;
     return (
@@ -18,10 +18,10 @@ class Template extends React.Component {
   }
 }
 
-Template.propTypes = {
+Layout.propTypes = {
   children: PropTypes.func,
   location: PropTypes.object,
   route: PropTypes.object,
 };
 
-export default Template
+export default Layout

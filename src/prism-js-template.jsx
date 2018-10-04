@@ -153,4 +153,4 @@ code.language-css .token.selector > .token.pseudo-class,
 code.language-css .token.selector > .token.pseudo-element {
 	color: #ffc66d;
 }
-`
+`;

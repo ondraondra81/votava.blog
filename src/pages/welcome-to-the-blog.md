@@ -1,0 +1,139 @@
+---
+title: Welcome to the Blog!
+date: "2018-07-01"
+featuredImage: 'assets/featured.jpg'
+---
+
+Welcome to the new blog, I hope you enjoy your stay! This is an example of how you can control what excerpt shows up. WTF
+
+<!-- end -->
+
+## Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+Příliš žluťoučký kůň úpěl ďábelské ódy. K podobným účelům mohou sloužit též například věty: Zvlášť zákeřný učeň s ďolíčky běží podél zóny úlů.
+
+*   Morbi sit amet turpis a purus
+*   Etiam tempor ultricies mi
+    *   Maecenas auctor enim a volutpat mattis
+*   Sed urna justo, scelerisque consectetur pharetra vitae
+
+Nam nec augue vel nisl placerat faucibus. Donec congue **nulla quis nunc** sagittis placerat. Pellentesque non tincidunt velit, cursus porttitor tellus. Suspendisse pulvinar tortor at _augue aliquam sagittis_. Duis non pulvinar augue. Ut tristique dignissim ligula, eget tempus diam molestie non. Nulla ultrices eleifend rutrum. Mauris convallis sollicitudin dui, pulvinar suscipit velit. Maecenas viverra finibus metus vitae blandit.
+
+### Příliš žluťoučký kůň úpěl ďábelské ódy. K podobným účelům mohou sloužit též například věty: Zvlášť zákeřný učeň s ďolíčky běží podél zóny úlů.
+
+Nam ullamcorper, orci nec tempor hendrerit, lorem nunc laoreet diam, vel gravida sem mi quis augue. Nunc odio velit, facilisis quis dictum non, facilisis quis felis. Vivamus [elementum dapibus nibh](https://google.com), eget aliquet nunc luctus maximus. Sed finibus risus eget ultrices maximus. Aliquam commodo consectetur diam eget tristique. Nunc quis erat quis felis fringilla tempus. Cras tempor nibh dolor, ac lacinia lacus ultrices eu.
+```php
+<?php declare(strict_types=1);
+
+namespace App\Controller;
+
+use App\Service\AboutMe;
+use App\Service\ContactForm;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+
+/**
+ * Class AboutController
+ * @package App\Controller
+ * @author Ondra Votava <me@ondravotava.cz>
+ */
+class AboutController extends Controller
+{
+    /**
+     * @var AboutMe
+     */
+    private $aboutMe;
+    /**
+     * @var ContactForm
+     */
+    private $contactForm;
+    
+    /**
+     * AboutController constructor.
+     *
+     * @param AboutMe     $aboutMe
+     * @param ContactForm $contactForm
+     */
+    public function __construct(AboutMe $aboutMe, ContactForm $contactForm)
+    {
+        $this->aboutMe = $aboutMe;
+        $this->contactForm = $contactForm;
+    }
+    
+    /**
+     * @Route("/", name="about")
+     * @Route("/", name="homepage")
+     * @param Request $request
+     *
+     * @return Response
+     * @throws \App\Exceptions\LogicException
+     * @throws \Symfony\Component\Form\Exception\LogicException
+     * @throws \Symfony\Component\OptionsResolver\Exception\InvalidOptionsException
+     */
+    public function index(Request $request): Response
+    {
+        $data = $this->aboutMe->getData();
+        $this->contactForm->create($this->generateUrl('about', [], UrlGeneratorInterface::ABSOLUTE_URL));
+        if ($request->isMethod('POST')) {
+            $send = $this->contactForm->handleRequest($request);
+            if ($request->isXmlHttpRequest()) {
+                if ($send) {
+                    return new JsonResponse(['status' => 'success']);
+                }
+                return new JsonResponse([
+                    'status' => 'fail',
+                    'errors' => $this->contactForm->getErrors(),
+                ], Response::HTTP_NOT_ACCEPTABLE);
+            }
+        }
+        $data['form'] = $this->contactForm->getFromView();
+        
+        
+        return $this->render('aboutme.html.twig', $data);
+    }
+    
+}
+
+```
+
+> Quisque tempor nulla turpis, ut placerat arcu lobortis nec. Aenean sed vehicula nisi. Nullam vitae placerat enim. Etiam hendrerit enim vel tempor fermentum. Morbi rutrum euismod ipsum a luctus.
+
+Morbi et libero id metus tempor imperdiet eget non mi. Mauris pulvinar quis enim at placerat. Vestibulum vitae dapibus lectus, ut elementum est.
+
+### Pellentesque facilisis venenatis mi, sit amet molestie nisl ornare et
+
+Morbi posuere facilisis eros vel euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam malesuada dapibus dolor non cursus. Sed in turpis justo. Cras sed hendrerit nulla. Sed ornare, leo et suscipit tincidunt, justo diam sollicitudin risus, vitae vulputate nulla augue et lacus.
+
+1.  Morbi posuere facilisis
+2.  Pellentesque habitant morbi tristique
+3.  Etiam malesuada dapibus
+
+Ut vel ligula ante. Proin quis metus magna. Nulla nec dui vulputate, semper orci in, sagittis dolor. Mauris dictum neque non fermentum consectetur. Integer vel pellentesque ex, ut tincidunt quam.
+
+#### Sed ac orci a dolor venenatis vulputate
+
+Sed sollicitudin, turpis ac malesuada dapibus, magna dui semper orci, in congue justo felis quis ante. Phasellus consequat et dolor fringilla accumsan. Pellentesque ullamcorper porttitor dolor et imperdiet.
+
+![Space](assets/space.jpg)
+
+Pellentesque consectetur facilisis venenatis. Nam ullamcorper, orci nec tempor hendrerit, lorem nunc laoreet diam, vel gravida sem mi quis augue. Nunc odio velit, facilisis quis dictum non, facilisis quis felis. Vivamus elementum dapibus nibh, eget aliquet nunc luctus maximus. Sed finibus risus eget ultrices maximus. Aliquam commodo consectetur diam eget tristique. Nunc quis erat quis felis fringilla tempus. Cras tempor nibh dolor, ac lacinia lacus ultrices eu.
+
+##### Nulla nec dui vulputate, semper orci in, sagittis dolor
+
+Mauris dictum neque non fermentum consectetur. Integer vel pellentesque ex, ut tincidunt quam. Sed ac orci a dolor venenatis vulputate. Sed sollicitudin, turpis ac malesuada dapibus, magna dui semper orci, in congue justo felis quis ante. Phasellus consequat et dolor fringilla accumsan. Pellentesque ullamcorper porttitor dolor et imperdiet.
+
+```javascript
+$(document).ready(function() {
+    console.log('More jQuery, wow!')
+})
+```
+
+###### ras aliquet ipsum ut enim pellentesque, id varius quam placerat
+
+Maecenas non scelerisque leo. Sed id purus fringilla, consequat magna non, faucibus neque. Cras ornare nisi a lectus ultricies convallis. Integer tristique dictum eros, et elementum ante consectetur eget. Phasellus sollicitudin est vestibulum suscipit pellentesque. Duis in eros cursus magna laoreet aliquam vel a lectus. Nulla ut nisi vitae ipsum sollicitudin vestibulum. Aenean sit amet mattis odio. Vestibulum ultrices sed ipsum nec pretium. Integer non turpis nunc. Praesent tincidunt tincidunt alique
+
+Integer mollis dolor non libero placerat, ut efficitur nisi ultricies. Etiam ac lacinia urna, eget ornare nunc. Suspendisse eget eros id turpis gravida semper. Duis ornare lorem et est pellentesque, quis rhoncus leo vestibulum. Nullam eu nulla ut elit rutrum iaculis. Cras a laoreet elit, in aliquet erat. Sed interdum varius posuere. Pellentesque eget luctus erat. Nam quis sem in ligula efficitur bibendum.

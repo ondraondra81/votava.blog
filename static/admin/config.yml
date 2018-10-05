@@ -2,7 +2,9 @@ backend:
   name: github
   repo: ondraondra81/votava.blog
 
-media_folder: src/pages/assets
+media_folder: static/images
+public_folder: images
+publish_mode: editorial_workflow
 
 collections:
 - name: blog
@@ -11,8 +13,8 @@ collections:
   create: true
   fields:
   - { name: 'path', label: 'Path' }
-  - { name: 'draft', label: 'Draft', widget: 'boolean' }
+  - { name: 'draft', label: 'Draft', widget: 'boolean', default: true }
   - { name: 'date', label: 'Date', widget: 'date' }
   - { name: 'title', label: 'Title' }
-  - { name: "featuredImage", label: "Featured Image", widget: "image"}
+  - { name: "featuredImage", label: "Featured Image", widget: "image", required: false}
   - { name: 'body', label: 'Body', widget: 'markdown' }

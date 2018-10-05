@@ -4,6 +4,7 @@ const path = require('path');
 const {createFilePath} = require('gatsby-source-filesystem');
 const createPaginatedPages = require('gatsby-paginate');
 const userConfig = require('./config');
+const deepMap = require('deep-map');
 
 const query = ` 
           {
@@ -78,11 +79,25 @@ exports.createPages = ({graphql, boundActionCreators}) => {
     })
 };
 
+const makeRelative = function makeRelative(value) {
+    let newValue = value;
+
+    if (typeof value === 'string' && path.isAbsolute(value)) {
+        console.log('VALUE', value);
+        newValue = path.join('../..', value);
+        console.log('NEW VALUE', newValue);
+    }
+
+    return newValue;
+};
 
 exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
     const {createNodeField} = boundActionCreators;
 
     if (node.internal.type === `MarkdownRemark`) {
+        deepMap(node.frontmatter, makeRelative, {
+            inPlace: true,
+        });
         const value = createFilePath({node, getNode});
         createNodeField({
             name: `slug`,

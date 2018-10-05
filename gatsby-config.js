@@ -7,6 +7,8 @@ module.exports = {
         author: userConfig.author,
     },
     plugins: [
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-netlify-cms-paths`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -15,10 +17,18 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/static/images`,
+                name: 'images',
+            },
+        },
+        {
             resolve: `gatsby-transformer-remark`,
             options: {
                 excerpt_separator: `<!-- end -->`,
                 plugins: [
+                    `gatsby-remark-relative-images-v2`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
@@ -33,20 +43,19 @@ module.exports = {
                             wrapperStyle: `margin-bottom: 1.0725rem`,
                         },
                     },
-                    "gatsby-remark-prismjs",
-                    "gatsby-remark-copy-linked-files",
-                    "gatsby-remark-smartypants",
+                    `gatsby-remark-prismjs`,
+                    `gatsby-remark-copy-linked-files`,
+                    `gatsby-remark-smartypants`,
                 ],
             },
         },
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                //trackingId: TRACKING ID HERE,
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-google-analytics`,
+        //     options: {
+        //         //trackingId: TRACKING ID HERE,
+        //     },
+        // },
         `gatsby-plugin-offline`,
-        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify-cms`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,

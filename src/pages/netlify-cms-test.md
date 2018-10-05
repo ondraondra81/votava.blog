@@ -3,7 +3,7 @@ path: netlify-cms-test
 draft: false
 date: 2018-10-04T15:05:13.928Z
 title: Netlify cms test
-featuredImage: "/src/pages/assets/snímek-obrazovky-2018-10-01-v\_14.49.57.png"
+featuredImage: "/static/images/snimek-obrazovky-2018-10-01.png"
 ---
 ### BLE
 
@@ -16,3 +16,6 @@ Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicit
 Ut tempus purus at lorem. Phasellus et lorem id felis nonummy placerat. Nulla quis diam. Aliquam erat volutpat. Integer tempor. Etiam quis quam. In dapibus augue non sapien. Mauris dictum facilisis augue. Fusce nibh. Maecenas lorem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aliquam erat volutpat. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Pellentesque arcu. Cras elementum. Pellentesque sapien.
 
 Integer imperdiet lectus quis justo. Duis viverra diam non justo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur vitae diam non enim vestibulum interdum. Integer tempor. Nam quis nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Etiam posuere lacus quis dolor. In dapibus augue non sapien. Aenean fermentum risus id tortor. Integer pellentesque quam vel velit. Fusce tellus. Aliquam in lorem sit amet leo accumsan lacinia. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tellus.
+
+
+![](/static/images/snimek-obrazovky-2018-10-01.png)

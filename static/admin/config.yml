@@ -2,8 +2,7 @@ backend:
   name: github
   repo: ondraondra81/votava.blog
 
-media_folder: /static/images
-public_folder: ../../static/images
+media_folder: static/images
 publish_mode: editorial_workflow
 
 collections:

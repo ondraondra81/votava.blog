@@ -84,7 +84,7 @@ const makeRelative = function makeRelative(value) {
 
     if (typeof value === 'string' && path.isAbsolute(value)) {
         console.log('VALUE', value);
-        newValue = path.join('../..', value);
+        newValue = path.join('../../static', value);
         console.log('NEW VALUE', newValue);
     }
 

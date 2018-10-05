@@ -3,7 +3,7 @@ backend:
   repo: ondraondra81/votava.blog
 
 media_folder: /static/images
-public_folder: ../../static/images
+public_folder: /images
 publish_mode: editorial_workflow
 
 collections:

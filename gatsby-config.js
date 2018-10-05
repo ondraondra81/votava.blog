@@ -8,7 +8,6 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-netlify-cms-paths`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -28,7 +27,7 @@ module.exports = {
             options: {
                 excerpt_separator: `<!-- end -->`,
                 plugins: [
-                    `gatsby-remark-relative-images-v2`,
+                    //`gatsby-remark-relative-images-v2`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {

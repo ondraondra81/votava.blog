@@ -18,7 +18,6 @@ const query = `
                   frontmatter {
                     title
                     date(formatString: "DD.MM.YYYY")
-                    draft
                     featuredImage {
                       childImageSharp {
                         sizes(maxWidth: 850) {
@@ -81,7 +80,6 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 
 const makeRelative = function makeRelative(value) {
     let newValue = value;
-
     if (typeof value === 'string' && path.isAbsolute(value)) {
         console.log('VALUE', value);
         newValue = path.join('../../static', value);

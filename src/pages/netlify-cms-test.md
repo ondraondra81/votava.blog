@@ -1,6 +1,4 @@
 ---
-path: netlify-cms-test
-draft: false
 date: 2018-10-04T15:05:13.928Z
 title: Netlify cms test
 featuredImage: "/images/snimek-obrazovky-2018-10-01.png"

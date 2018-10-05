@@ -12,8 +12,6 @@ collections:
   folder: src/pages
   create: true
   fields:
-  - { name: 'path', label: 'Path' }
-  - { name: 'draft', label: 'Draft', widget: 'boolean', default: true }
   - { name: 'date', label: 'Date', widget: 'date' }
   - { name: 'title', label: 'Title' }
   - { name: "featuredImage", label: "Featured Image", widget: "image", required: false}

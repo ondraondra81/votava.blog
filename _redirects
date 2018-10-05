@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://votava-blog.netlify.com/* https://votava.blog/:splat 301!

@@ -3,7 +3,7 @@ path: netlify-cms-test
 draft: false
 date: 2018-10-04T15:05:13.928Z
 title: Netlify cms test
-featuredImage: "/static/images/snimek-obrazovky-2018-10-01.png"
+featuredImage: "/images/snimek-obrazovky-2018-10-01.png"
 ---
 ### BLE
 
@@ -18,4 +18,4 @@ Ut tempus purus at lorem. Phasellus et lorem id felis nonummy placerat. Nulla qu
 Integer imperdiet lectus quis justo. Duis viverra diam non justo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur vitae diam non enim vestibulum interdum. Integer tempor. Nam quis nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Etiam posuere lacus quis dolor. In dapibus augue non sapien. Aenean fermentum risus id tortor. Integer pellentesque quam vel velit. Fusce tellus. Aliquam in lorem sit amet leo accumsan lacinia. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tellus.
 
 
-![](/static/images/snimek-obrazovky-2018-10-01.png)
+![](/images/snimek-obrazovky-2018-10-01.png)

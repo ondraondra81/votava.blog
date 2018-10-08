@@ -1,6 +1,6 @@
 ---
 date: 2018-10-05T12:57:39.570Z
-title: Statický web s Gatsby.js a deploy s Netlify.com
+title: Statický web s Gatsby.js a deploy za pomoci Netlify.com
 featuredImage: /images/gatsbyjs_netlify_github.jpeg
 ---
 Na zařijové poSobotě nám (dopln) ukazoval JAMstack. Během jeho přenášky jsem si řekl, že je to možná řešení mého problému. Již dlouho jsem chtěl svůj blog, ale nebyl čas ne jeho přípravu a vubec ty věci okolo. A tady všichni slibovali stránky do 30 minut a pak už je hurá na tvorbu obsahu.

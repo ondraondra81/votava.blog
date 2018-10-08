@@ -1,1 +1,1 @@
-require('./src/prismjs.css');
+require('./static/prismjs.css');

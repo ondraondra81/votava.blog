@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../prism-js-template';
 import '../global-styles';
 import userConfig from '../../config';
 

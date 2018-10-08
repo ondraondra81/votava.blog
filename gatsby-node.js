@@ -81,9 +81,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 const makeRelative = function makeRelative(value) {
     let newValue = value;
     if (typeof value === 'string' && path.isAbsolute(value)) {
-        console.log('VALUE', value);
         newValue = path.join('../../static', value);
-        console.log('NEW VALUE', newValue);
     }
 
     return newValue;

@@ -109,7 +109,7 @@ Bohuže nefunguje :( \
 Kromě balíčků `netlify-cms` a `gatsby-plugin-netlify-cms`, které uvádí dokumentace, je potřeba i `netlify` což jsem následně zjisti v repu
  nějaké šablony, co hlásila, že podporu netlify-cms má.
 
-Vytvářím konfig v `static/admin` podle (dokumentace)[https://www.netlifycms.org/docs/add-to-your-site] 
+Vytvářím konfig v `static/admin` podle (dokumentace)[https://www.netlifycms.org/docs/add-to-your-site]
 ```yaml
 #static/admin/config.yaml
 backend:
@@ -120,6 +120,10 @@ media_folder: /static/images
 public_folder: /images
 publish_mode: editorial_workflow
 
+slug:
+  encoding: unicode
+  clean_accents: true
+  
 collections:
 - name: blog
   label: Blog

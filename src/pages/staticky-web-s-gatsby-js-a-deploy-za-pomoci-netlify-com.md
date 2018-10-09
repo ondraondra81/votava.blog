@@ -278,7 +278,7 @@ Celé repo najdete na [GitHub](https://github.com/ondraondra81/votava.blog)u
 
 Do budoucna bych chtěl ještě přidat tagy a odkazy na relevantní články,
  tak uvidíme jak si v tomto směru Gatsby.js povede.
-Ještě předtím ale vyzkouším (Hugo)[https://gohugo.io] abych měl srovnání (a možná i další blog :D )
+Ještě předtím ale vyzkouším [Hugo](https://gohugo.io)abych měl srovnání (a možná i další blog :D )
 
 
  

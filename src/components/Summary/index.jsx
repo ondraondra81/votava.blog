@@ -7,6 +7,7 @@ import Wrapper from './Wrapper';
 import Link from './Link';
 import Date from './Date';
 import ContinueReading from './ContinueReading';
+import stripLinksFromExcerpt from '../../utils/stripLinksFromExcerpt';
 
 function Summary({date, title, excerpt, slug, image}) {
   return (
@@ -18,7 +19,7 @@ function Summary({date, title, excerpt, slug, image}) {
         }
         <H1><Link to={slug}>{title}</Link></H1>
         <Date>{date}</Date>
-        <P>{excerpt}</P>
+        <P>{stripLinksFromExcerpt(excerpt)}</P>
         <ContinueReading to={slug}>Celý článek &rarr;</ContinueReading>
     </Wrapper>
   );

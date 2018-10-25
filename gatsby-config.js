@@ -48,12 +48,12 @@ module.exports = {
                 ],
             },
         },
-        // {
-        //     resolve: `gatsby-plugin-google-analytics`,
-        //     options: {
-        //         //trackingId: TRACKING ID HERE,
-        //     },
-        // },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: 'UA-111925650-2',
+            },
+        },
         `gatsby-plugin-offline`,
         `gatsby-plugin-netlify-cms`,
         `gatsby-transformer-sharp`,

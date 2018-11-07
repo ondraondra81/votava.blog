@@ -1,10 +1,13 @@
 ---
 date: 2018-11-07T12:50:15.869Z
-title: Jak obnovit smazaný stash
+title: Jak obnovit smazaný GIT STASH
 featuredImage: /images/git.png
 ---
-Už se Vám někdy stalo, že jste si smazali omylem git stash? \
-Ne? Mě dneska ano. A málem mě trefilo! 
+Už se Vám někdy stalo, že jste si smazali omylem git stash?
+
+Ne? 
+
+Mě dneska ano. A málem mě trefilo! 
 
 Nevěděl jsem totiž, že: `git reset --hard` smaže právě i **stash**e
 

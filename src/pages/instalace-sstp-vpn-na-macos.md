@@ -18,8 +18,7 @@ usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute
 
 1. nainstalovat macports (pokud námáte) viz: <https://guide.macports.org/#installing.macports>
 2. nainstalovat sstp clienta: `port install sstp-client`
-3. upravit si script nize (vpn.sh) a nastvit mu práva se spustit
-`chmod +x vpn.sh`
+3. upravit si script nize (vpn.sh) a nastavit mu práva pro spuštění `chmod +x vpn.sh`
 4. spustit vpn.sh a připojit se :)
 
 ```sh
